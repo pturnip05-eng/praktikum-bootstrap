@@ -1,0 +1,113 @@
+/* ===== Warna utama (ubah di sini kalau mau ganti tema) ===== */
+:root {
+  --warna-utama: #2b59c3;
+  --warna-gelap: #14213d;
+  --warna-aksen: #fca311;
+  --warna-terang: #f5f7fb;
+}
+
+/* ===== Pengaturan dasar ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding-top: 56px;            /* ruang untuk navbar yang fixed-top */
+  color: #333;
+}
+
+section {
+  scroll-margin-top: 56px;      /* judul tidak tertutup navbar saat klik menu */
+}
+
+/* ===== Navbar ===== */
+.bg-dark-custom {
+  background-color: var(--warna-gelap);
+}
+
+.text-accent {
+  color: var(--warna-aksen);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .active > .nav-link {
+  color: var(--warna-aksen);
+}
+
+/* ===== Hero ===== */
+.hero {
+  min-height: calc(100vh - 56px);
+  padding: 3rem 0;
+  background: linear-gradient(135deg, var(--warna-gelap), var(--warna-utama));
+  color: #fff;
+}
+
+.hero h1 {
+  font-weight: 700;
+}
+
+/* ===== Tombol aksen ===== */
+.btn-accent {
+  background-color: var(--warna-aksen);
+  border-color: var(--warna-aksen);
+  color: var(--warna-gelap);
+  font-weight: 600;
+}
+
+.btn-accent:hover {
+  background-color: #e29200;
+  border-color: #e29200;
+  color: var(--warna-gelap);
+}
+
+/* ===== Judul bagian ===== */
+.section-title {
+  font-weight: 700;
+  color: var(--warna-gelap);
+  margin-bottom: 1.5rem;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--warna-aksen);
+  margin: 0.75rem auto 0;       /* garis di tengah */
+}
+
+.section-title-left::after {
+  margin-left: 0;               /* garis rata kiri */
+}
+
+/* ===== Section Services ===== */
+.bg-terang {
+  background-color: var(--warna-terang);
+}
+
+.card-layanan {
+  transition: transform 0.2s ease;
+}
+
+.card-layanan:hover {
+  transform: translateY(-6px);
+}
+
+/* ===== Footer ===== */
+.footer {
+  background-color: var(--warna-gelap);
+  color: #cfd6e4;
+}
+
+.footer a {
+  color: #cfd6e4;
+}
+
+.footer a:hover {
+  color: var(--warna-aksen);
+  text-decoration: none;
+}
+
+.garis-footer {
+  border-color: rgba(255, 255, 255, 0.15);
+}
